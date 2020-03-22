@@ -1,0 +1,20 @@
+.rTable {
+    display: contents;
+    width: 100%;
+    float: left;
+ }
+ .rTableHeading, .rTableBody, .rTableFoot, .rTableRow{
+    clear: both;
+ }
+ .rTableHead, .rTableFoot{
+    background-color: #DDD;
+    font-weight: bold;
+ }
+ .rTableCell, .rTableHead {
+    border: none;
+    float: left;
+    height: 17px;
+    overflow: hidden;
+    padding: 3px 1.8%;
+    width: auto;
+ }

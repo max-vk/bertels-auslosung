@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!-- [if gt IE 8]> <html class="no-js"> <![endif] -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bertels Auslosung</title>
+    <meta name="description" content="Turnierauslosung fuer das legendaere Bertels Beer Pong Turnier">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h2>Auslosung - Bertels Beer Pong Turnier!</h2>
+    <div id="namesDiv" style="padding-bottom: 5px">
+        <label>Teilnehmer</label>
+        <input type="text" id="names" name="names" style="width: 50%;">
+    </div>
+    <div id="seedDiv">
+        <label>Zufallszahl </label>
+        <input type="text" id="seed" name="seed" style="width: 5%;">
+    </br></br>
+        <button onclick="shuffleInput()">Shuffle</button>
+    </div>
+
+         <div class="rTable" id="Teilnehmerliste">
+            <!-- <div class="rTableRow ">
+                <div class="rTableHead"><strong>Name</strong></div>
+            </div>
+            <div class="rTableRow ">
+                <div class="rTableRow ">
+                    <div class="rTableCell">Cassie</div>
+                </div>
+                <div class="rTableRow ">
+                    <div class="rTableCell">Cassie</div>
+                </div>
+                <div class="rTableRow ">
+                    <div class="rTableCell">Cassie</div>
+                </div>
+                <div class="rTableRow ">
+                    <div class="rTableCell">Cassie</div>
+                </div>
+            </div>
+
+            <div>
+                Text
+            </div> -->
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.4/dist/sweetalert2.all.min.js"></script>
+        <script src="ausloser.js"></script>
+</body>
+
+</html>
