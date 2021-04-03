@@ -8,54 +8,58 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bertels Auslosung</title>
-    <meta name="description" content="Turnierauslosung fuer das legendaere Bertels Beer Pong Turnier">
+    <meta name="description" content="Turnierauslosung für das legendäre Bertels Beer Pong Turnier">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="body.css">
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    <h2>Auslosung - Bertels Beer Pong Turnier!</h2>
-    <div id="namesDiv" style="padding-bottom: 5px">
-        <label>Teilnehmer</label>
-        <input type="text" id="names" name="names" style="width: 50%;">
-    </div>
-    <div id="seedDiv">
-        <label>Zufallszahl </label>
-        <input type="text" id="seed" name="seed" style="width: 5%;">
-    </br></br>
-        <button onclick="shuffleInput()">Shuffle</button>
+    <div class="header w3-container w3-orange">
+        <img src="img/logo.png" alt="logo" />
+        <h2>Auslosung - Bertels Beer Pong Turnier</h2>
     </div>
 
-         <div class="rTable" id="Teilnehmerliste">
-            <!-- <div class="rTableRow ">
-                <div class="rTableHead"><strong>Name</strong></div>
-            </div>
-            <div class="rTableRow ">
-                <div class="rTableRow ">
-                    <div class="rTableCell">Cassie</div>
-                </div>
-                <div class="rTableRow ">
-                    <div class="rTableCell">Cassie</div>
-                </div>
-                <div class="rTableRow ">
-                    <div class="rTableCell">Cassie</div>
-                </div>
-                <div class="rTableRow ">
-                    <div class="rTableCell">Cassie</div>
-                </div>
-            </div>
-
-            <div>
-                Text
-            </div> -->
+    <div id="namesDivWrap" class="w3-container" style="padding-left: 20px; padding-top: 20px;">
+        <div id="namesDiv" style="padding-bottom: 5px">
+            <label>Teilnehmerliste</label>
+            <input class="w3-input" type="text" id="names" name="names" style="width: 50%;">
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.4/dist/sweetalert2.all.min.js"></script>
-        <script src="ausloser.js"></script>
+        <p>
+            <button class="w3-button w3-orange w3-padding-large w3-hover-black" id="startButton"
+                onclick="shuffleInput()">Auslosung starten</button>
+        </p>
+    </div>
+
+    <div class="w3-container" style="padding-left: 20px; padding-top: 20px;">
+        <div class="w3-responsive" id="TeamtabelleDiv" style="display: none;">
+            <label>Ausgeloste Teams</label>
+            <table class="w3-table-all" id="Teamtabelle" style="white-space: nowrap">
+
+            </table>
+        </div>
+
+        </br>
+
+        <div id="Teilnehmer-div" style="display: none;">
+            <label class="w3-header3">Teilnehmer</label>
+            <table style="display: none;" class="w3-table" id="Teilnehmerliste">
+            </table>
+        </div>
+    </div>
+    <p>
+    <div
+        style="left: 50%; padding-top: 25px; position: absolute; -ms-transform: translate(-50%); transform: translate(-50%);">
+        <button class="w3-button w3-orange w3-padding-large w3-hover-black draw-button" id="drawButton"
+            style="display: none;" onclick="drawButton()">Auslosen</button>
+    </div>
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="ausloser.js"></script>
 </body>
 
 </html>
