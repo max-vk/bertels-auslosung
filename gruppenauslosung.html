@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!-- [if gt IE 8]> <html class="no-js"> <![endif] -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bertels Auslosung</title>
+    <meta name="description" content="Turnierauslosung für das legendäre Bertels Beer Pong Turnier">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="header w3-container w3-orange">
+        <img src="img/logo.png" alt="logo" />
+        <h2>Gruppenauslosung - Bertels Beer Pong Turnier</h2>
+    </div>
+
+    <div id="teamsDivWrap" class="w3-container" style="padding-left: 20px; padding-top: 20px;">
+        <div id="teamsDiv" style="padding-bottom: 5px">
+            <label>Teilnehmerliste</label>
+            <input class="w3-input" type="text" id="teamResults" name="teamResults" style="width: 50%;">
+        </div>
+
+        <p>
+            <button class="w3-button w3-orange w3-padding-large w3-hover-black" id="startButton"
+                onclick="shuffleGroups()">Gruppenauslosung starten</button>
+        </p>
+    </div>
+
+    <div class="w3-container" style="padding-left: 20px; padding-top: 20px;">
+        <div class="w3-responsive" id="GruppentabelleDiv" >
+            <table class="w3-table" id="Gruppentabelle" style="white-space: nowrap">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Gruppe A</th>
+                        <th style="width: 25%;">Gruppe B</th>
+                        <th style="width: 25%;">Gruppe C</th>
+                        <th style="width: 25%;">Gruppe D</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td id="Team 1"></td>
+                    <td id="Team 6"></td>
+                    <td id="Team 10"></td>
+                    <td id="Team 14"></td>
+                </tr>
+                <tr>
+                    <td id="Team 2"></td>
+                    <td id="Team 7"></td>
+                    <td id="Team 11"></td>
+                    <td id="Team 15"></td>
+                </tr>
+                <tr>
+                    <td id="Team 3"></td>
+                    <td id="Team 8"></td>
+                    <td id="Team 12"></td>
+                    <td id="Team 16"></td>
+                </tr>
+                <tr>
+                    <td id="Team 4"></td>
+                    <td id="Team 9"></td>
+                    <td id="Team 13"></td>
+                    <td id="Team 17"></td>
+                </tr>
+                <tr>
+                    <td id="Team 5"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p>
+    <div
+        style="left: 50%; padding-top: 25px; position: absolute; -ms-transform: translate(-50%); transform: translate(-50%);">
+        <button class="w3-button w3-orange w3-padding-large w3-hover-black" id="drawButton"
+                style="display: none" onclick="drawButton()">Gruppe auslosen</button>
+    </div>
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="gruppenauslosung.js"></script>
+</body>
+
+</html>
